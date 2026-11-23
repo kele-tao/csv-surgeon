@@ -1,0 +1,38 @@
+name: Feature request
+description: Suggest a rule, a repair or a workflow
+title: "feat: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem are you hitting?
+      description: Describe the real CSV, not an abstract idea.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What should csv-surgeon do?
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - new lint rule
+        - new repair
+        - profiling
+        - export (JSON/SQL)
+        - performance
+        - documentation
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety
+      options:
+        - label: This request does not require inventing data or guessing intent
+          required: true

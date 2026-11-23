@@ -1,0 +1,10 @@
+﻿order_id;customer;order_date;amount;status;status
+1001;Acme Corp;2024-01-02;$1,234.50;shipped;shipped
+1002; Globex ;02/01/2024;$99.00;pending;pending
+1003;Initech;Jan 2 2024;€1.234,56;shipped;shipped
+1004;Umbrella​Corp;2024-01-04;1,234.56;cancelled;cancelled
+1005;"Hooli
+Labs";2024-01-05;$0.00;shipped;shipped
+1006;Soylent "Co;2024-01-07;$42.00;pending;pending
+1007;Vandelay;2024-01-08
+1001;Acme Corp;2024-01-02;$1,234.50;shipped;shipped

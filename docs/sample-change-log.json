@@ -1,0 +1,54 @@
+{
+  "input": "examples/messy.csv",
+  "output": "docs/sample-clean.csv",
+  "fixes": [
+    "bom",
+    "newline",
+    "header",
+    "trim",
+    "zero-width",
+    "control",
+    "quotes",
+    "blank-rows",
+    "dedupe"
+  ],
+  "rows_in": 8,
+  "rows_out": 7,
+  "counts": {
+    "bom": 1,
+    "dedupe": 1,
+    "header": 1,
+    "newline": 10,
+    "quotes": 1,
+    "trim": 1,
+    "zero-width": 1
+  },
+  "change_log_truncated": false,
+  "changes": [
+    {
+      "line": 1,
+      "action": "header",
+      "before": "order_id | customer | order_date | amount | status | status",
+      "after": "order_id | customer | order_date | amount | status | status_2"
+    },
+    {
+      "line": 3,
+      "action": "trim",
+      "before": "1002 |  Globex  | 02/01/2024 | $99.00 | pending | pending",
+      "after": "1002 | Globex | 02/01/2024 | $99.00 | pending | pending"
+    },
+    {
+      "line": 5,
+      "action": "zero-width",
+      "before": "1004 | Umbrella​Corp | 2024-01-04 | 1,234.56 | cancelled | …",
+      "after": "1004 | UmbrellaCorp | 2024-01-04 | 1,234.56 | cancelled | c…"
+    },
+    {
+      "line": 10,
+      "action": "dedupe",
+      "before": "1001 | Acme Corp | 2024-01-02 | $1,234.50 | shipped | shipp…",
+      "after": ""
+    }
+  ],
+  "notes": []
+}

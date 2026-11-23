@@ -1,0 +1,29 @@
+{
+  "file_mb": 5.0,
+  "rows": 111844,
+  "repeat": 2,
+  "rig": "win32 3.12.10",
+  "operations": [
+    {
+      "operation": "lint",
+      "seconds": 3.231,
+      "rows_per_second": 34615,
+      "mb_per_second": 1.5,
+      "peak_alloc_mb": 19.79
+    },
+    {
+      "operation": "profile",
+      "seconds": 9.136,
+      "rows_per_second": 12242,
+      "mb_per_second": 0.5,
+      "peak_alloc_mb": 20.61
+    },
+    {
+      "operation": "repair (dry run)",
+      "seconds": 2.595,
+      "rows_per_second": 43099,
+      "mb_per_second": 1.9,
+      "peak_alloc_mb": 13.25
+    }
+  ]
+}

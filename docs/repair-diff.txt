@@ -1,0 +1,16 @@
+--- examples/messy.csv
++++ docs/sample-clean.csv
+@@ -1 +1 @@
+-order_id;customer;order_date;amount;status;status
++order_id;customer;order_date;amount;status;status_2
+@@ -3 +3 @@
+-1002; Globex ;02/01/2024;$99.00;pending;pending
++1002;Globex;02/01/2024;$99.00;pending;pending
+@@ -5 +5 @@
+-1004;Umbrella​Corp;2024-01-04;1,234.56;cancelled;cancelled
++1004;UmbrellaCorp;2024-01-04;1,234.56;cancelled;cancelled
+@@ -8 +8 @@
+-1006;Soylent "Co;2024-01-07;$42.00;pending;pending
++1006;"Soylent ""Co";2024-01-07;$42.00;pending;pending
+@@ -10 +9,0 @@
+-1001;Acme Corp;2024-01-02;$1,234.50;shipped;shipped

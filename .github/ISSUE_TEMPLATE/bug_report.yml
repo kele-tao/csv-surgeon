@@ -1,0 +1,58 @@
+name: Bug report
+description: Something produced a wrong result or crashed
+title: "bug: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. A CSV file that reproduces the problem is worth
+        more than a paragraph of description.
+  - type: input
+    id: version
+    attributes:
+      label: csv-surgeon version
+      placeholder: "1.0.0 (python -m csv_surgeon --version)"
+    validations:
+      required: true
+  - type: dropdown
+    id: command
+    attributes:
+      label: Command
+      options:
+        - lint
+        - profile
+        - repair
+        - to-json
+        - to-sql
+        - rules
+    validations:
+      required: true
+  - type: textarea
+    id: command-line
+    attributes:
+      label: Full command line
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behaviour
+      description: Paste the output. Redact anything private.
+    validations:
+      required: true
+  - type: textarea
+    id: sample
+    attributes:
+      label: Minimal reproducing CSV
+      render: csv
+      description: A few lines are enough. Keep unicode characters if they matter.
+    validations:
+      required: false
