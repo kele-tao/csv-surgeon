@@ -1,5 +1,7 @@
 # csv-surgeon
 
+**English** | [简体中文](README.zh-CN.md)
+
 **Find the twelve things wrong with an Excel CSV in one pass, then fix the six that are safe to fix.**
 
 [![CI](https://github.com/kele-tao/csv-surgeon/actions/workflows/ci.yml/badge.svg)](https://github.com/kele-tao/csv-surgeon/actions/workflows/ci.yml)
