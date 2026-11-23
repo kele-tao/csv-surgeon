@@ -5,10 +5,12 @@
 [![CI](https://github.com/kele-tao/csv-surgeon/actions/workflows/ci.yml/badge.svg)](https://github.com/kele-tao/csv-surgeon/actions/workflows/ci.yml)
 ![python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![license](https://img.shields.io/badge/license-MIT-green)
-![tests](https://img.shields.io/badge/tests-144%20passing-brightgreen)
+![tests](https://img.shields.io/badge/tests-145%20passing-brightgreen)
 ![deps](https://img.shields.io/badge/runtime%20deps-0-brightgreen)
 
 ![csv-surgeon lint output](docs/screenshot.png)
+
+![csv-surgeon profile output](docs/screenshot-profile.png)
 
 ## The problem
 
