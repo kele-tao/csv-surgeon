@@ -27,12 +27,14 @@ def test_clean_file_has_no_findings(clean_csv):
 def test_messy_example_triggers_the_promised_rules(messy_csv):
     report = lint(str(messy_csv))
     found = codes(report)
+    # CS006 (non-LF / mixed line endings) depends on how git checked the file out:
+    # a CRLF or autocrlf clone legitimately normalises it away, so it is asserted
+    # separately below on a fixture written with mixed endings at runtime.
     expected_codes = (
         "CS001",
         "CS003",
         "CS004",
         "CS005",
-        "CS006",
         "CS007",
         "CS008",
         "CS010",
@@ -43,6 +45,11 @@ def test_messy_example_triggers_the_promised_rules(messy_csv):
     for expected in expected_codes:
         assert expected in found, expected
     assert report.error_count >= 2
+
+
+def test_mixed_line_endings_cs006(write_csv):
+    path = write_csv("mixed.csv", b"a,b\r\n1,2\n3,4\r\n")
+    assert "CS006" in codes(lint(str(path)))
 
 
 def test_duplicate_header_cs001(write_csv):
